@@ -8,6 +8,16 @@ A Flutter package for classic web content auditing and directory path mapping.
 - **Custom Wordlists**: Allows custom dictionary input for target auditing.
 - **Lightweight Execution**: Low memory footprint optimized for mobile apps.
 
+## 🌐 Official Platform & Command Center / رابط منصة التطبيق
+
+- **Website / Repository**: [https://github.com/AbdoFawzi777/redops-hub](https://github.com/AbdoFawzi777/redops-hub)
+
+## ⚖️ Ownership & Intellectual Property / حقوق الملكية الفكرية
+
+جميع حقوق الملكية والتطوير والبرمجة محفوظة رسمياً للمطور الرئيسي:
+**مهندس البرمجيات / عبد الله فوزي علي محمود**
+(Software Engineer: **Abdallah Fawzi Ali Mahmoud**)
+
 ## 🚀 Installation
 
 Add this package to your Flutter project's `pubspec.yaml`:
@@ -16,8 +26,8 @@ Add this package to your Flutter project's `pubspec.yaml`:
 dependencies:
   dirb_engine:
     git:
-      url: https://github.com/AbdoFawzi777/redops-hub.git
-      path: packages/dirb_engine
+      url: https://github.com/AbdoFawzi777/dirb_engine.git
+      ref: main
 ```
 
 ## 📝 Usage Example
@@ -36,5 +46,5 @@ Distributed under the MIT License.
 
 ## 🤝 Contributing & Support
 
-- **Repository**: [https://github.com/AbdoFawzi777/redops-hub](https://github.com/AbdoFawzi777/redops-hub)
-- **Report Issues**: [https://github.com/AbdoFawzi777/redops-hub/issues](https://github.com/AbdoFawzi777/redops-hub/issues)
+- **Main Repository**: [https://github.com/AbdoFawzi777/redops-hub](https://github.com/AbdoFawzi777/redops-hub)
+- **Report Issues**: [https://github.com/AbdoFawzi777/dirb_engine/issues](https://github.com/AbdoFawzi777/dirb_engine/issues)
