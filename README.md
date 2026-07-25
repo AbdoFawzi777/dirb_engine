@@ -8,9 +8,10 @@ A Flutter package for classic web content auditing and directory path mapping.
 - **Custom Wordlists**: Allows custom dictionary input for target auditing.
 - **Lightweight Execution**: Low memory footprint optimized for mobile apps.
 
-## 🌐 Official Platform & Command Center / رابط منصة التطبيق
+## 🌐 Official App Website & Platform / رابط موقع التطبيق الرسمي
 
-- **Website / Repository**: [https://github.com/AbdoFawzi777/redops-hub](https://github.com/AbdoFawzi777/redops-hub)
+- **Official Website**: [https://redops-hub.web.app/](https://redops-hub.web.app/)
+- **GitHub Monorepo**: [https://github.com/AbdoFawzi777/redops-hub](https://github.com/AbdoFawzi777/redops-hub)
 
 ## ⚖️ Ownership & Intellectual Property / حقوق الملكية الفكرية
 
@@ -46,5 +47,6 @@ Distributed under the MIT License.
 
 ## 🤝 Contributing & Support
 
+- **Official Website**: [https://redops-hub.web.app/](https://redops-hub.web.app/)
 - **Main Repository**: [https://github.com/AbdoFawzi777/redops-hub](https://github.com/AbdoFawzi777/redops-hub)
 - **Report Issues**: [https://github.com/AbdoFawzi777/dirb_engine/issues](https://github.com/AbdoFawzi777/dirb_engine/issues)
