@@ -1,51 +1,57 @@
-﻿/// 📁 Dirb Engine - Basic directory scanning for Flutter
-library dirb_engine;
-
+import 'dart:async';
 import 'package:http/http.dart' as http;
 
+/// 📁 Dirb Engine v6.0 - Absolute Perfection
 class DirbEngine {
   static final DirbEngine _instance = DirbEngine._internal();
   factory DirbEngine() => _instance;
   DirbEngine._internal();
 
   bool _initialized = false;
+  bool get isInitialized => _initialized;
 
-  static const List<String> _defaultWordlist = [
-    'admin', 'login', 'config', 'api', 'upload', 'test', 'dev'
-  ];
-
-  /// 🚀 تهيئة المحرك
   Future<void> initialize() async {
     _initialized = true;
   }
 
-  /// 🔍 فحص الدلائل الأساسي
-  Future<List<DirbResult>> scan(String target, {List<String>? wordlist}) async {
-    final wordlistToUse = wordlist ?? _defaultWordlist;
-    final results = <DirbResult>[];
-    for (final word in wordlistToUse) {
-      try {
-        final url = '$target/$word';
-        final response = await http.get(Uri.parse(url)).timeout(const Duration(seconds: 5));
-        if (response.statusCode != 404) {
-          results.add(DirbResult(
-            path: word,
-            statusCode: response.statusCode,
-            size: response.body.length,
-          ));
-        }
-      } catch (_) {}
-    }
-    return results;
-  }
+  /// 🚀 Absolute Directory Auditing Logic
+  Future<DirbResult> scan(String target, {List<String>? wordlist}) async {
+    final list = wordlist ?? ['admin', 'backup', 'config', 'test', 'logs'];
+    final List<DiscoveryMatch> found = [];
+    final client = http.Client();
+    final startTime = DateTime.now();
 
-  /// 📊 حالة المحرك
-  bool get isInitialized => _initialized;
+    try {
+      for (final path in list) {
+        final url = target.endsWith('/') ? target + path : '$target/$path';
+        try {
+          final resp = await client.get(Uri.parse(url)).timeout(const Duration(seconds: 5));
+          if (resp.statusCode != 404) {
+            found.add(DiscoveryMatch(path: path, status: resp.statusCode, size: resp.body.length));
+          }
+        } catch (_) {}
+      }
+    } finally {
+      client.close();
+    }
+
+    return DirbResult(
+      target: target,
+      matches: found,
+      duration: DateTime.now().difference(startTime),
+    );
+  }
+}
+
+class DiscoveryMatch {
+  final String path;
+  final int status, size;
+  DiscoveryMatch({required this.path, required this.status, required this.size});
 }
 
 class DirbResult {
-  final String path;
-  final int statusCode;
-  final int size;
-  DirbResult({required this.path, required this.statusCode, required this.size});
+  final String target;
+  final List<DiscoveryMatch> matches;
+  final Duration duration;
+  DirbResult({required this.target, required this.matches, required this.duration});
 }
