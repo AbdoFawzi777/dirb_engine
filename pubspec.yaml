@@ -1,6 +1,6 @@
 name: dirb_engine
-description: A modular simulation engine for RedOps Hub.
-version: 1.0.0
+description: Classic web content scanner and URL directory auditor for Dart & Flutter. Inspired by DIRB.
+version: 2.0.0
 publish_to: none
 
 environment:
