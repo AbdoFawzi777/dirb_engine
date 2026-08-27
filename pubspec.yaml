@@ -1,4 +1,4 @@
-name: dirb_engine
+﻿name: dirb_engine
 description: Classic web content scanner and URL directory auditor for Dart and Flutter.
 version: 2.0.0
 repository: https://github.com/AbdoFawzi777/dirb_engine
@@ -9,12 +9,14 @@ environment:
   sdk: '>=3.3.0 <4.0.0'
 
 dependencies:
+  crypto: ^3.0.3
   flutter:
     sdk: flutter
   http: ^1.2.1
-  crypto: ^3.0.3
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   lints: ^3.0.0
+
+
